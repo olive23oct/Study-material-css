@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+    h1 { background-color: aqua; }
+    
+    h2 { background-color: yellow; }
+    /* 선택자 . : class 의미 */
+    .red { background-color: red; }
+    .green { background-color: green; }
+    .yellow { background-color: yellow; }
+    
+    h2 { background-color: orange; }
+
+    /* 선택자 # : id를 의미 */
+    #yellow { background-color: yellow; }
+    
+    h3 { background-color: green; }
+    
+    /* 스타일 적용 우선순위 : id, class, 태그(tag) */
+    #violet { background-color: violet; }
+    
+    div > p { background-color: coral;
+        border: 1px solid black;
+    }
+    
+    p.green { background-color: greenyellow; }
+</style>
+</head>
+<body>
+<!--
+    CSS문법 : 선택자 {속성명: 속성값; 속성명: 속성값; ....}
+    작성위치
+        1. HTML 태그안(속성) : style="속성명: 속성값; 속성명: 속성값; .."
+        2. <head> 태그 안 : 
+            <style>
+                선택자 {속성명: 속성값; 속성명: 속성값; ....}
+            </style>
+        3. 외부파일 링크방식(head 태그 안에 선언)
+            <link rel="stylesheet" type="text/css" href="mystyle.css">
+-->
+    <h1>CSS 바탕색 지정 : background-color</h1>
+    <h2>H2태그 : 아무 속성 설정 없음</h2>
+    <h2 class="red">H2태그 : 속성 class="red" 설정</h2>
+    <h2 class="green">H2태그 : 속성 class="green" 설정</h2>
+    <hr>
+    
+    <h3>배경색 녹색(h3)</h3>
+    <div class="yellow">녹색바탕 div(class="green")</div>
+    
+    <hr>
+    <p>일반 p태그(id, class 속성없는)</p>
+    <p id="yellow" class="green">id속성을 가진 p태그(id="yellow")</p>
+    <p class="yellow">class속성을 가진 p태그(class="yellow")</p>
+    
+    <hr>
+    <p id="violet" class="green">id, class 동시 선언된 p태그</p>
+    <div>
+        <p>div안에 있는 p태그</p>
+        <p class="green">div안에 있는 p태그(class="green")</p>
+    </div>
+    
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+    
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
